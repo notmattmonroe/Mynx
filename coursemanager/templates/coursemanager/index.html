@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+ {% block content %}
+
+
+<!-- new version -->
+{% if latest_courses_list %}
+<h1>Winter 2018</h1>
+<!-- <h2>Feb 5-Mar 31</h2> -->
+{% regroup latest_courses_list by category_id  as courses_by_category %}
+
+{% for c in courses_by_category %}
+  <h2>{{c.grouper}}</h2>
+  <ul>
+    {% for course in c.list %}
+     
+      <li> <a href="/classes-and-workshops/{{ course.id }}/">{{ course.course_name }}</a> with {{ course.course_instructor }},
+          
+          {% if course.custom_start_date %} {{ course.custom_start_date }} {% else %}
+          {{ course.get_course_days_of_week_display }}s  {% endif %} at {{ course.course_start_time }}<p /></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+{% else %}
+    <p>No courses are available.</p>
+{% endif %}
+
+ {% endblock content %}
+

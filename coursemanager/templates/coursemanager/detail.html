@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+ {% block content %}
+<h1>{{ course.course_name }}</h1>with {{ course.course_instructor }}<p />
+<img src="/media/{{ course.course_image }}" class="courseheader"><br />
+
+{{ course.course_description | safe }}<p />
+<p/>
+Held at: {{ course.location.location_name }} {{ course.location.location_address }}<br>
+Time:  {{ course.course_start_time }} to {{ course.course_end_time }}<br>
+Price: $ {{ course.course_price }}<br>
+Dropins Allowed: {{ course.dropins }}, ${{ course.dropin_price }}<br />
+<!-- need recurrence rules here
+course.course_recurrence.rrules -->
+<!-- turn on once switched to eventbrite
+<hr>
+Once you have determined what courses you wish to take, you can sign up on 
+
+<a href="{{ course.course_ticket_link }}">to pay online</a> and add the classes you want or register <a href="/offline-registration">here</a> to pay offline.
+<p />
+-->
+ {% endblock content %}

@@ -1,0 +1,82 @@
+/* stylelint-disable selector-list-comma-newline-after */
+body {
+    background-color: #333;
+    color: #fff;
+    Font-Family: 'Open Sans', Sans-Serif;
+}
+.mynx-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.mynx-header img {
+    height: 100%;
+    width: 100%;
+}
+.mynx-header-logo {
+}
+
+.mynx-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+.navbar {
+    border: none;
+    width: 100%;
+    padding: none;
+    margin: none;
+    background-color: #000;
+    width: 100%;
+    Font-Family: 'Raleway', Sans-Serif;
+    font-size: 150%;
+
+}
+.navbar a {
+    color: red;
+}
+
+.mynx-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.mynx-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+@media (min-width: 40em) {
+  .mynx-title {
+    font-size: 3.5rem;
+  }
+}
+
+
+.mynx-main {
+	font-family: 'Comfortaa', cursive; 
+   margin-top: 2%;
+    color: #fff;
+}
+
+
+.mynx-footer {
+  width: 100%;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.mynx-footer p:last-child {
+  margin-bottom: 0;
+}

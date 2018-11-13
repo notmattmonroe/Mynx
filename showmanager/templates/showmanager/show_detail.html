@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %} {{ object.show_name }} - Van Ella Productions {% endblock %}
+
+{% block content %}
+
+<h2> {{ object.show_name }} {{ object.show_date }}</h2>
+<img src="/media/{{ object.show_image }}" class="courseheader"><br />
+<h3>{{ object.venue_id }},  {{ object.venue_id.location_address }}</h3>
+Doors: {{ object.show_doors }}<br />
+Show: {{ object.show_start }}
+<p />
+<!--
+<h3>Featuring:</h3>
+
+
+{% for act in object.act_set.all %}
+    {{ act.performer.first_name}} {{ act.performer.last_name }}<br />
+{% endfor %}
+will be needed later for full show manager implementation
+-->
+
+<br /><br />
+{{ object.show_notes | safe }}
+
+<p />
+Tickets available at <a href="{{ object.show_ticket_link }}">Eventbrite</a> 
+
+
+ {% endblock content %}
+

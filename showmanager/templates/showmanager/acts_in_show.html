@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+{% for show_act in object_list %}
+    <li>{{show_act.name}}</li>
+{% endfor %}
+</ul>
+{% endblock %}
